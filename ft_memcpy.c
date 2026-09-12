@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/11 19:50:51 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/11 21:21:49 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/09 16:26:50 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/10 15:55:37 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	while (*s != '\0')
+	unsigned char		*ptr_to_dest;
+	const unsigned char	*ptr_to_src;
+	size_t				i;
+
+	i = 0;
+	ptr_to_dest = (unsigned char *)dest;
+	ptr_to_src = (const unsigned char *)src;
+	while (i < n)
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		ptr_to_dest[i] = ptr_to_src[i];
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
+	return (dest);
 }
 
 /*#include <stdio.h>
 
 int	main(void)
 {
-	char s[] = "watermelon and limon";
-	char *result = ft_strchr(s, 'm');
+	char src[10] = "Hello bro";
+	char dest[20];
 
-	printf("Result: %s\n", result);
+	ft_memcpy(dest, src, 6);
+	dest[6] = '\0';
+
+	printf("src:  %s\n", src);
+	printf("dest: %s\n", dest);
+
 	return (0);
 }*/

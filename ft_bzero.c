@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/11 19:50:51 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/11 21:21:49 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/09 15:31:24 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/10 14:22:47 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
+	unsigned char	*ptr;
+	size_t			x;
 
-/*#include <stdio.h>
+	ptr = (unsigned char *)s;
+	x = 0;
+	while (x < n)
+	{
+		ptr[x] = '\0';
+		x++;
+	}
+}
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	char s[] = "watermelon and limon";
-	char *result = ft_strchr(s, 'm');
+	char s[] = "abcdef";
+	ft_bzero(s, 1);
+	printf(" 0 : %c\n "  ,s[0]);
+		printf(" 1 : %c\n "  ,s[1]);
+		printf(" 2 : %c\n "  ,s[2]);
 
-	printf("Result: %s\n", result);
-	return (0);
 }*/

@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/11 19:50:51 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/11 21:21:49 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/10 14:46:25 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/10 17:37:42 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	while (*s != '\0')
+	size_t	i;
+
+	i = 0;
+	if (size == 0)
+		return (0);
+	while (size > i && src[i] != '\0')
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		dst[i] = src[i];
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
+/*
+#include <stdio.h>
 
-/*#include <stdio.h>
-
-int	main(void)
+int main ()
 {
-	char s[] = "watermelon and limon";
-	char *result = ft_strchr(s, 'm');
-
-	printf("Result: %s\n", result);
-	return (0);
+	char i[17];
+	size_t x = ft_strlcpy(i, "hello, world", 14);
+	printf ("%zu   and i is            : %s             ", x, i);
 }*/

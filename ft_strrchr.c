@@ -12,34 +12,35 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    const char *start;
+	const char	*start;
 
-    start = s;
-    while (*s != '\0')
-        s++;
-    if (c == *s)
-        return ((char *)s);
-    while (s != start)
-    {
-        if (*s == c)
-            return ((char *)s);
-        s--;
-    }
-    return (NULL);
+	start = s;
+	while (*s != '\0')
+		s++;
+	if (c == *s)
+		return ((char *)s);
+	while (s != start)
+	{
+		if (*s == c)
+			return ((char *)s);
+		s--;
+	}
+	return (NULL);
 }
 /*
 
-i did return ((char *)s); cuz the type of s is
+i did return	((char *)s); cuz the type of s is
 const so i convert it to pointer var
 
 #include <stdio.h>
 
-int main()
+int	main(void)
 {
-    char s[] = "pew this is the poooo"; // 16 the last ones and 0 the first ones ;
-    char *result = ft_strrchr(s, 'p');
+	char s[] = "pew this is the poooo";
+		// 16 the last ones and 0 the first ones ;
+	char *result = ft_strrchr(s, 'p');
 
-    printf("the result is %s    .", result);
+	printf("the result is %s    .", result);
 }*/

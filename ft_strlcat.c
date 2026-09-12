@@ -12,50 +12,49 @@
 
 #include "libft.h"
 
-static size_t ft_strnlen(const char *p, size_t t)
+static size_t	ft_strnlen(const char *p, size_t t)
 {
-    size_t counter;
+	size_t	counter;
 
-    counter = 0;
-    while (counter < t && p[counter])
-        counter++;
-    return (counter);
+	counter = 0;
+	while (counter < t && p[counter])
+		counter++;
+	return (counter);
 }
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t dst_len;
-    size_t counter_src;
-    size_t counter_while;
-    size_t counter_dst;
+	size_t	dst_len;
+	size_t	counter_src;
+	size_t	counter_while;
+	size_t	counter_dst;
 
-    dst_len = ft_strnlen(dst, size);
-    if (dst_len < size)
-        counter_while = size - dst_len - 1;
-    else
-        counter_while = 0;
-    counter_src = 0;
-    counter_dst = dst_len;
-
-    while (counter_src < counter_while && src[counter_src] != '\0')
-    {
-        dst[counter_dst] = src[counter_src];
-        counter_src++;
-        counter_dst++;
-    }
-    if (dst_len < size)
-        dst[counter_dst] = '\0';
-    return (dst_len + ft_strlen(src));
+	dst_len = ft_strnlen(dst, size);
+	if (dst_len < size)
+		counter_while = size - dst_len - 1;
+	else
+		counter_while = 0;
+	counter_src = 0;
+	counter_dst = dst_len;
+	while (counter_src < counter_while && src[counter_src] != '\0')
+	{
+		dst[counter_dst] = src[counter_src];
+		counter_src++;
+		counter_dst++;
+	}
+	if (dst_len < size)
+		dst[counter_dst] = '\0';
+	return (dst_len + ft_strlen(src));
 }
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    char dst[20] = "";
+	char dst[20] = "";
 
-    printf("Return: %zu\n", ft_strlcat(dst, "Hello", sizeof(dst)));
-    printf("After: %s\n", dst);
+	printf("Return: %zu\n", ft_strlcat(dst, "Hello", sizeof(dst)));
+	printf("After: %s\n", dst);
 
-    return (0);
+	return (0);
 }*/

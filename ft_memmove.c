@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/11 19:50:51 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/11 21:21:49 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/10 11:57:29 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/12 14:43:04 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	while (*s != '\0')
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d > src)
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		while (--n > 0)
+			d[n] = s[n];
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
+	else
+	{
+		ft_memcpy(dest, src, n);
+	}
+	return (d);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char s[] = "watermelon and limon";
-	char *result = ft_strchr(s, 'm');
-
-	printf("Result: %s\n", result);
-	return (0);
-}*/
