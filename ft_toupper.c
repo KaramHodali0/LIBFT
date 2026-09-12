@@ -6,13 +6,11 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:14:04 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 18:10:21 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 01:33:19 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int	toupper(int c)
+int ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c -= 32;

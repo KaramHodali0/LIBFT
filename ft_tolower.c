@@ -6,13 +6,13 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:09:03 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/10 15:55:37 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 01:33:15 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

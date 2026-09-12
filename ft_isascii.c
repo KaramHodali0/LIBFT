@@ -6,13 +6,13 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 16:17:39 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/10 15:55:37 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 01:33:50 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isascii(int c)
+int ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
