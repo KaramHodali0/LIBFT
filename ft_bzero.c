@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 15:31:24 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/10 14:22:47 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/12 15:43:25 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	x = 0;
 	while (x < n)
 	{
-		ptr[x] = '\0';
+		ptr[x] = 0;
 		x++;
 	}
 }

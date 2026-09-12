@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/11 19:36:41 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 18:06:38 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/12 14:47:48 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/12 17:17:20 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void    *ft_calloc(size_t nmemb, size_t size)
 {
-    char *pew;
-    char *start;
+    unsigned char   *p;
 
-    size_t p;
-
-    p = ft_strlen(s);
-
-    pew = malloc(p + 1);
-    if (!pew)
+    if (size != 0 && nmemb > (size_t)-1 / size)
         return (NULL);
-    start = pew;
-    while (*s != '\0')
-    {
-        *pew = *s;
-        s++;
-        pew++;
-    }
-    *pew = '\0';
-    return (start);
+
+    if (size == 0 || nmemb == 0)
+        return (malloc(0));
+    p = malloc(size * nmemb);
+    if (!p)
+        return (NULL);
+    ft_bzero(p, size * nmemb);
+    return (p);
 }
-/*
-#include <stdio.h>
-int main ()
-{
-    return (0);
-}*/
