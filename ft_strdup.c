@@ -14,29 +14,28 @@
 
 char	*ft_strdup(const char *s)
 {
-    char *pew;
-    char *start;
+	char	*pew;
+	char	*start;
+	size_t	p;
 
-    size_t p;
-
-    p = ft_strlen(s);
-
-    pew = malloc(p + 1);
-    if (!pew)
-        return (NULL);
-    start = pew;
-    while (*s != '\0')
-    {
-        *pew = *s;
-        s++;
-        pew++;
-    }
-    *pew = '\0';
-    return (start);
+	p = ft_strlen(s);
+	pew = malloc(p + 1);
+	if (!pew)
+		return (NULL);
+	start = pew;
+	while (*s != '\0')
+	{
+		*pew = *s;
+		s++;
+		pew++;
+	}
+	*pew = '\0';
+	return (start);
 }
 /*
 #include <stdio.h>
+
 int main ()
 {
-    return (0);
+	return (0);
 }*/

@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (size == 0)
@@ -30,10 +30,12 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 /*
 #include <stdio.h>
 
-int main()
+int	main(void)
 {
-	char i[17];
-	size_t x = ft_strlcpy(i, "hello, world", 14);
+	char	i[17];
+	size_t	x;
+
+	x = ft_strlcpy(i, "hello, world", 14);
 	printf("%zu   and i is            : %s             ", x, i);
 }
 }*/
