@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 21:20:11 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/08 22:11:24 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ size_t	ft_strlen(const char *s)
 		counter++;
 	return (counter);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("  :   %lu ", ft_strlen("hey bro"));
-}*/

@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 20:24:43 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/11 21:17:11 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-
-i did return	((char *)s); cuz the type of s is
-const so i convert it to pointer var
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char s[] = "pew this is the poooo";
-		// 16 the last ones and 0 the first ones ;
-	char *result = ft_strrchr(s, 'p');
-
-	printf("the result is %s    .", result);
-}*/

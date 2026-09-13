@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 23:33:44 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 01:06:13 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char big[] = "Hello world";
-	char little[] = "world";
-
-	printf("%s\n", ft_strnstr(big, little, 11));
-}*/

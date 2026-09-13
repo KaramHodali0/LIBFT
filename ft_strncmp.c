@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 21:44:00 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/11 22:22:01 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char *s1 = "hello kara";
-	char *s2 = "hellA kara";
-
-	int x = ft_strncmp(s1, s2, 11);
-
-	printf("result is %d ", x);
-
-	return (0);
-}*/

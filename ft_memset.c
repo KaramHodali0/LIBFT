@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 22:10:45 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/10 12:45:33 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (ptr);
 }
-/*
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char str[10] = "hello";
-
-	ft_memset(str, 'A', 10);
-
-	printf("%s\n", str);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 21:20:40 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 23:06:06 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char *p = "hello world";
-	char *h = ft_memchr(p, 'w', 11);
-
-	printf("result is %s .", h);
-	return (0);
-}*/

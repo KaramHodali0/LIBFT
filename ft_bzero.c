@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 15:31:24 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 15:43:25 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		x++;
 	}
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char s[] = "abcdef";
-	ft_bzero(s, 1);
-	printf(" 0 : %c\n "  ,s[0]);
-		printf(" 1 : %c\n "  ,s[1]);
-		printf(" 2 : %c\n "  ,s[2]);
-
-}*/

@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 17:03:06 by nalayyou          #+#    #+#             */
-/*   Updated: 2026/09/11 18:09:33 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[counter_dst] = '\0';
 	return (dst_len + ft_strlen(src));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char dst[20] = "";
-
-	printf("Return: %zu\n", ft_strlcat(dst, "Hello", sizeof(dst)));
-	printf("After: %s\n", dst);
-
-	return (0);
-}*/

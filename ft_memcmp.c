@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 23:11:45 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/13 01:12:33 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char *s1 = "hello";
-	char *s2 = "hello";
-
-	printf("%d\n", ft_memcmp(s1, s2, 5));
-	return (0);
-}*/

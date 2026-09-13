@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 01:06:50 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 20:37:43 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ int	ft_atoi(const char *nptr)
 		number *= -1;
 	return (number);
 }
-/*
-
-I NEED TO REVIEW THE WHILE LOOP WHICE IS FOR THE SIGN.
-
-#include <stdio.h>
-
-int main () {
-	int a;
-	a = ft_atoi ("      -ggg367282");
-	printf("%d" , a);
-}*/

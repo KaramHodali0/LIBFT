@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 19:50:51 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/12 21:25:16 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char s[] = "watermelon and limon";
-	char *result = ft_strchr(s, 'm');
-
-	printf("Result: %s\n", result);
-	return (0);
-}*/

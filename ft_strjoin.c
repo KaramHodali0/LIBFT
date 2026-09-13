@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 12:43:31 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/13 13:37:21 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 13:49:24 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,3 @@ char *ft_strjoin(char const *s1, char const *s2)
     result[i + p] = '\0';
     return (result);
 }
-/*
-#include <stdio.h>
-
-int main ()
-{
-    char *s1 = "Hello";
-    char *s2 = " Mr Robot";
-    char *r = ft_strjoin(s1, s2);
-
-    printf("this is the rsult %s .", r);
-    return (0);
-}*/
