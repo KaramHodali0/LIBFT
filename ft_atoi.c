@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	char *str;
-	int sign;
-	int number;
+	char	*str;
+	int		sign;
+	int		number;
 
 	str = (char *)nptr;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))

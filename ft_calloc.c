@@ -14,11 +14,10 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	if (size != 0 && nmemb > (size_t)-1 / size)
 		return (NULL);
-
 	if (size == 0 || nmemb == 0)
 		return (malloc(0));
 	p = malloc(size * nmemb);
