@@ -14,10 +14,10 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	c;
-	size_t	instead_while_counter;
-	size_t	len_little;
+	size_t i;
+	size_t c;
+	size_t instead_while_counter;
+	size_t len_little;
 
 	len_little = ft_strlen(little);
 	i = 0;

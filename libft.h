@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 14:37:02 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/13 12:46:45 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/13 14:05:31 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #include <stdlib.h>
 
 size_t ft_strlen(const char *s);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void *ft_memset(void *s, int c, size_t n);
 void ft_bzero(void *s, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);

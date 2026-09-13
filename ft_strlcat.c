@@ -24,10 +24,10 @@ static size_t	ft_strnlen(const char *p, size_t t)
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	counter_src;
-	size_t	counter_while;
-	size_t	counter_dst;
+	size_t dst_len;
+	size_t counter_src;
+	size_t counter_while;
+	size_t counter_dst;
 
 	dst_len = ft_strnlen(dst, size);
 	if (dst_len < size)

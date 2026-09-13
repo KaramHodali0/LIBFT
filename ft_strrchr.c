@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*start;
+	const char *start;
 
 	start = s;
 	while (*s != '\0')
