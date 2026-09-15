@@ -6,13 +6,13 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 16:23:01 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/13 01:34:03 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/16 00:31:45 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+int ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

@@ -6,24 +6,38 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 15:22:14 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/13 15:30:38 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/16 02:30:09 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
-	char	*result;
+	int i;
+	char *result;
+	char *last;
 
-	start = 0;
-	end = ft_strnlen(s1);
-	while (*s1 == *set)
-		s1++;
-	while (s1[end] == *set)
+	result = (char *)s1;
+
+	while (ft_strchr(set, *result) != NULL)
+		result++;
+
+	// 	last = result;
+	// 	while (*last != '\0')
+	// 		last++;
+
+	// 	while (ft_strrchr(set, *last) != NULL)
+	// 		last++;
+
+	// 	last = result;
+	// 	return (last);
+	// }
+	// #include <stdio.h>
+	int main()
 	{
-		/* code */
+		char *str = "*+****++++***this is*enought** bro++*+*";
+		char *result = ft_strtrim(str, "+*");
+
+		printf("RESULT IS  :  %s.   ", result);
 	}
-}
