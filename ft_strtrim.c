@@ -5,39 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/13 15:22:14 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/16 02:30:09 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/16 11:28:32 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/16 14:21:35 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	char *result;
-	char *last;
+	char	*result;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
-	result = (char *)s1;
+	i = 0;
+	start = 0;
+	end = ft_strlen(s1);
+	while (start < end && ft_strchr(set, s1[start]) != NULL)
+		start++;
+	while (end > start && ft_strchr(set, s1[end - 1]) != NULL)
+		end--;
 
-	while (ft_strchr(set, *result) != NULL)
-		result++;
-
-	// 	last = result;
-	// 	while (*last != '\0')
-	// 		last++;
-
-	// 	while (ft_strrchr(set, *last) != NULL)
-	// 		last++;
-
-	// 	last = result;
-	// 	return (last);
-	// }
-	// #include <stdio.h>
-	int main()
+	result = malloc(end - start + 1);
+	if (!result)
+		return (NULL);
+	while (i < (end - start))
 	{
-		char *str = "*+****++++***this is*enought** bro++*+*";
-		char *result = ft_strtrim(str, "+*");
-
-		printf("RESULT IS  :  %s.   ", result);
+		result[i] = s1[i + start];
+		i++;
 	}
+	result[i] = '\0';
+	return (result);
+}
