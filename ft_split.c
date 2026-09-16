@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 12:04:41 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/16 16:58:42 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/16 19:08:21 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int count_words(char *s, char c)
     }
     return (count);
 }
+
+//size_t get_elngth
 
 
 char    **ft_split(char const *s, char c);
