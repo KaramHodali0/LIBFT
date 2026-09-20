@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 11:28:32 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/16 14:21:35 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/20 18:31:00 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end > start && ft_strchr(set, s1[end - 1]) != NULL)
 		end--;
-
 	result = malloc(end - start + 1);
 	if (!result)
 		return (NULL);
