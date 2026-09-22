@@ -6,16 +6,16 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 11:49:29 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/22 17:14:49 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/23 02:27:40 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *s, char c)
+static int count_words(const char *s, char c)
 {
-	int	i;
-	int	count;
+	int i;
+	int count;
 
 	count = 0;
 	i = 0;
@@ -28,9 +28,9 @@ static int	count_words(const char *s, char c)
 	return (count);
 }
 
-static size_t	get_length(const char *s, char c)
+static size_t get_length(const char *s, char c)
 {
-	size_t	count;
+	size_t count;
 
 	count = 0;
 	while (s[count] != c && s[count] != '\0')
@@ -40,11 +40,11 @@ static size_t	get_length(const char *s, char c)
 	return (count);
 }
 
-static char	*copy_word(const char *s, char c)
+static char *copy_word(const char *s, char c)
 {
-	size_t	len_of_word;
-	size_t	i;
-	char	*word;
+	size_t len_of_word;
+	size_t i;
+	char *word;
 
 	i = 0;
 	len_of_word = get_length(s, c);
@@ -60,9 +60,9 @@ static char	*copy_word(const char *s, char c)
 	return (word);
 }
 
-static void	free_split(char **str, int index)
+static void free_split(char **str, int index)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (i < index)
@@ -73,11 +73,11 @@ static void	free_split(char **str, int index)
 	free(str);
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	char	**split_words;
-	size_t	i;
-	size_t	start;
+	char **split_words;
+	int i;
+	size_t start;
 
 	split_words = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!split_words)
