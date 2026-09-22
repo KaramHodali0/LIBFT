@@ -6,7 +6,7 @@
 #    By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/07 14:33:24 by kalhouda          #+#    #+#              #
-#    Updated: 2026/09/08 16:02:36 by kalhouda         ###   ########.fr        #
+#    Updated: 2026/09/22 14:16:06 by kalhouda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,4 +37,4 @@ fclean: clean
 
 re: fclean all
 
-// phony
+.PHONY: all clean fclean re
