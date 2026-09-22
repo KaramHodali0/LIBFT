@@ -6,27 +6,39 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:55:31 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/21 18:31:27 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/21 21:17:33 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void ft_putnbr_fd(int n, int fd)
 {
-	long	nbr;
-	int		pr_one_digit;
+	long nbr;
+	char pr_one_digit[12];
+	size_t i;
 
 	nbr = n;
+	i = 0;
 	if (nbr < 0)
 	{
 		write(fd, "-", 1);
 		nbr = -nbr;
 	}
+	if (nbr == 0)
+	{
+		write(fd, "0", 1);
+		return;
+	}
 	while (nbr > 0)
 	{
-		pr_one_digit = nbr % 10;
+		pr_one_digit[i] = (nbr % 10) + '0';
 		nbr /= 10;
-		wirte(fd, &pr_one_digit, 1);
+		i++;
+	}
+	while (i > 0)
+	{
+		i--;
+		write(fd, &pr_one_digit[i], 1);
 	}
 }
