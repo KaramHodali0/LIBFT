@@ -1,41 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 16:55:31 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/23 16:26:06 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/23 16:31:37 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/23 16:33:50 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	long nbr;
-	char pr_one_digit[12];
-	size_t i;
-
-	nbr = n;
-	i = 0;
-	if (nbr < 0)
-	{
-		write(fd, "-", 1);
-		nbr = -nbr;
-	}
-	if (nbr == 0)
-	{
-		write(fd, "0", 1);
-		return;
-	}
-	while (nbr > 0)
-	{
-		pr_one_digit[i] = (nbr % 10) + '0';
-		nbr /= 10;
-		i++;
-	}
-	while (i-- > 0)
-		write(fd, &pr_one_digit[i], 1);
 }

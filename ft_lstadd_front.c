@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 16:35:59 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/22 16:40:01 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/23 13:37:25 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-     
+    new->next = *lst;
+    *lst = new;
 }
