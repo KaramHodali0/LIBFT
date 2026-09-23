@@ -6,7 +6,7 @@
 #    By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/07 14:33:24 by kalhouda          #+#    #+#              #
-#    Updated: 2026/09/23 02:24:15 by kalhouda         ###   ########.fr        #
+#    Updated: 2026/09/23 02:34:31 by kalhouda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,15 +49,7 @@ SRCS = ft_atoi.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-	ft_lstnew_bonus.c \
-	ft_lstadd_front_bonus.c \
-	ft_lstsize_bonus.c \
-	ft_lstlast_bonus.c \
-	ft_lstadd_back_bonus.c \
-	ft_lstdelone_bonus.c \
-	ft_lstclear_bonus.c \
-	ft_lstiter_bonus.c \
-	ft_lstmap_bonus.c
+	ft_lstnew.c
 
 OBJS = $(SRCS:.c=.o)
 
