@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 16:55:31 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/24 13:30:05 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/24 11:33:49 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/24 13:14:35 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	long	nbr;
-	char	pr_one_digit[12];
-	size_t	i;
+	t_list	*tem;
+	t_list	*n;
 
-	nbr = n;
-	i = 0;
-	if (nbr < 0)
-	{
-		write(fd, "-", 1);
-		nbr = -nbr;
-	}
-	if (nbr == 0)
-	{
-		write(fd, "0", 1);
+	if (!lst || !*lst)
 		return ;
-	}
-	while (nbr > 0)
+	tem = *lst;
+	while (tem)
 	{
-		pr_one_digit[i] = (nbr % 10) + '0';
-		nbr /= 10;
-		i++;
+		n = tem->next;
+		del(tem->content);
+		free(tem);
+		tem = n;
 	}
-	while (i-- > 0)
-		write(fd, &pr_one_digit[i], 1);
+	*lst = NULL;
 }

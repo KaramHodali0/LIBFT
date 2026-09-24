@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 16:55:31 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/24 13:30:05 by kalhouda         ###   ########.fr       */
+/*   Created: 2026/09/24 13:16:21 by kalhouda          #+#    #+#             */
+/*   Updated: 2026/09/24 13:29:04 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	long	nbr;
-	char	pr_one_digit[12];
-	size_t	i;
-
-	nbr = n;
-	i = 0;
-	if (nbr < 0)
+	while (lst)
 	{
-		write(fd, "-", 1);
-		nbr = -nbr;
+		f(lst->content);
+		lst = lst->next;
 	}
-	if (nbr == 0)
-	{
-		write(fd, "0", 1);
-		return ;
-	}
-	while (nbr > 0)
-	{
-		pr_one_digit[i] = (nbr % 10) + '0';
-		nbr /= 10;
-		i++;
-	}
-	while (i-- > 0)
-		write(fd, &pr_one_digit[i], 1);
 }

@@ -6,7 +6,7 @@
 #    By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/07 14:33:24 by kalhouda          #+#    #+#              #
-#    Updated: 2026/09/23 16:31:56 by kalhouda         ###   ########.fr        #
+#    Updated: 2026/09/24 13:35:04 by kalhouda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,8 +54,10 @@ SRCS = ft_atoi.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
 	ft_lstadd_back.c \
-	ft_lstdelone.c
-
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 
