@@ -6,47 +6,52 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 19:57:59 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/20 18:12:48 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/25 18:39:38 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	length_of_number(long n)
-{
-	size_t	counter;
+#include "libft.h"
 
-	counter = 0;
-	while (n > 0)
+static size_t length(long n)
+{
+	size_t count;
+
+	count = 0;
+	if (n <= 0)
+		count++;
+	while (n)
 	{
-		n /= 10;
-		counter++;
+		n = n / 10;
+		count++;
 	}
-	return (counter);
+	return (count);
 }
 
-char	*ft_itoa(int n)
+char *ft_itoa(int n)
 {
-	long	nu;
-	size_t	len;
-	char	*res;
-	size_t	temp;
+	char *res;
+	size_t len;
+	long c;
 
-	nu = n;
-	len = length_of_number(nu);
-	if (nu < 0)
-	{
-		nu = -nu;
-		len++;
-	}
+	c = n;
+	len = length(c);
 	res = malloc(len + 1);
-	temp = len;
-	while (len > 0)
+	if (!res)
+		return (NULL);
+	res[len] = '\0';
+	if (c < 0)
 	{
-		res[len - 1] = (nu % 10) + '0';
-		nu /= 10;
-		len--;
+		res[0] = '-';
+		c = -c;
 	}
-	res[temp] = '\0';
+	if (c == 0)
+		res[0] = '0';
+	while (c)
+	{
+		res[--len] = (c % 10) + '0';
+		c = c / 10;
+	}
 	return (res);
 }

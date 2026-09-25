@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 11:49:29 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/23 02:27:40 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/25 17:52:46 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ char **ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	start = 0;
+	while (s[start] == c)
+		start++;
 	while (i < count_words(s, c))
 	{
 		split_words[i] = copy_word(s + start, c);
