@@ -12,11 +12,9 @@
 
 #include "libft.h"
 
-#include "libft.h"
-
-static size_t length(long n)
+static size_t	length(long n)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	if (n <= 0)
@@ -29,11 +27,11 @@ static size_t length(long n)
 	return (count);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *res;
-	size_t len;
-	long c;
+	char	*res;
+	size_t	len;
+	long	c;
 
 	c = n;
 	len = length(c);
