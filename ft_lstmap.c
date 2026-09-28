@@ -6,7 +6,7 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 13:34:37 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/26 01:11:18 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/28 13:50:18 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*list;
 	void	*fnew;
 
+	list = NULL;
 	while (lst)
 	{
 		fnew = f(lst->content);

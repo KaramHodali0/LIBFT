@@ -6,96 +6,94 @@
 /*   By: kalhouda <kalhouda@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 11:49:29 by kalhouda          #+#    #+#             */
-/*   Updated: 2026/09/27 11:59:47 by kalhouda         ###   ########.fr       */
+/*   Updated: 2026/09/28 13:46:08 by kalhouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	i;
 	int	count;
 
-	count = 0;
 	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-static size_t	get_length(const char *s, char c)
-{
-	size_t	count;
-
 	count = 0;
-	while (s[count] != c && s[count] != '\0')
+	while (s[i])
 	{
-		count++;
+		while (s[i] == c)
+			i++;
+		if (s[i])
+			count++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (count);
 }
 
-static char	*copy_word(const char *s, char c)
+static char	*get_word(char const *s, int start, int end)
 {
-	size_t	len_of_word;
-	size_t	i;
+	int		i;
 	char	*word;
 
-	i = 0;
-	len_of_word = get_length(s, c);
-	word = malloc(len_of_word + 1);
+	word = malloc(sizeof(char) * (end - start + 1));
 	if (!word)
 		return (NULL);
-	while (i < len_of_word && s[i] != c)
-	{
-		word[i] = s[i];
-		i++;
-	}
+	i = 0;
+	while (start < end)
+		word[i++] = s[start++];
 	word[i] = '\0';
 	return (word);
 }
 
-static void	free_split(char **str, int index)
+static void	free_split(char **split, int i)
+{
+	while (i > 0)
+		free(split[--i]);
+	free(split);
+}
+
+static int	fill_split(char **split, char const *s, char c)
 {
 	int	i;
+	int	j;
+	int	start;
 
 	i = 0;
-	while (i < index)
+	j = 0;
+	while (s[i])
 	{
-		free(str[i]);
-		i++;
+		while (s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		split[j] = get_word(s, start, i);
+		if (!split[j])
+			return (j);
+		j++;
 	}
-	free(str);
+	split[j] = NULL;
+	return (-1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**split_words;
-	int		i;
-	size_t	start;
+	int		error;
+	char	**split;
 
-	split_words = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!split_words)
+	if (!s)
 		return (NULL);
-	i = 0;
-	start = 0;
-	while (s[start] == c)
-		start++;
-	while (s[start] != '\0')
+	split = malloc(sizeof(char *) * (count_word(s, c) + 1));
+	if (!split)
+		return (NULL);
+	error = fill_split(split, s, c);
+	if (error >= 0)
 	{
-		split_words[i] = copy_word(s + start, c);
-		if (!split_words[i])
-			return (free_split(split_words, i), NULL);
-		start += get_length(s + start, c);
-		while (s[start] == c)
-			start++;
-		i++;
+		free_split(split, error);
+		return (NULL);
 	}
-	split_words[i] = NULL;
-	return (split_words);
+	return (split);
 }
