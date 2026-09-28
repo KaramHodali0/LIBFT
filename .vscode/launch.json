@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/kalhouda/mywork/libft/libftCopy/LIBFT",
-      "program": "/home/kalhouda/mywork/libft/libftCopy/LIBFT/build/Debug/outDebug",
+      "cwd": "/home/kalhouda/mywork/libft/LIBFT",
+      "program": "/home/kalhouda/mywork/libft/LIBFT/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
