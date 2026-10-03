@@ -151,12 +151,12 @@ The main reference used to understand the behavior of the standard functions rec
 
 This reference was used to better understand the intended behavior and implementation concepts behind standard C library functions.
 
-** Manual Pages
-**
-** The C Standard Library Book
-**
-**C Documentation
-**
+** Manual Pages **
+
+** The C Standard Library Book **
+
+**C Documentation **
+
 Additional C documentation and references were used to understand:
 
 * Pointers
