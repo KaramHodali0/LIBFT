@@ -147,15 +147,13 @@ Special attention is given to edge cases such as:
 
 The main reference used to understand the behavior of the standard functions recreated in this project was:
 
-**The Standard C Library — P. J. Plauger**
+### The Standard C Library Book
 
 This reference was used to better understand the intended behavior and implementation concepts behind standard C library functions.
 
-** Manual Pages **
+### Manual Pages 
 
-** The C Standard Library Book **
-
-**C Documentation **
+### C Documentation
 
 Additional C documentation and references were used to understand:
 
