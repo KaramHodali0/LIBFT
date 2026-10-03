@@ -153,21 +153,7 @@ This reference was used to better understand the intended behavior and implement
 
 ### Manual Pages
 
-The Unix manual pages were used to verify function behavior, parameters, return values, and edge cases:
-
-```bash
-man strlen
-man memset
-man memcpy
-man memmove
-man strchr
-man strcmp
-man strdup
-man calloc
-man atoi
-```
-
-For functions with similar behavior to standard library functions, their manual pages were used as behavioral references rather than as implementations.
+## The C Standard Library Book
 
 ### C Documentation
 
@@ -195,22 +181,6 @@ The official 42 Libft subject and project requirements were used as the primary 
 * Linked-list requirements
 * Norminette constraints
 
-### AI Usage
-
-AI tools were used as a **learning and debugging assistant** during the project.
-
-AI was used for:
-
-* Explaining C concepts such as pointers, `void *`, structures, `typedef`, function pointers, `size_t`, and dynamic memory allocation.
-* Explaining the behavior and purpose of individual Libft functions.
-* Discussing edge cases and possible memory-management problems.
-* Helping interpret compiler errors, segmentation faults, and Valgrind reports.
-* Reviewing implementations and pointing out potential bugs.
-* Creating example test cases to help verify function behavior.
-* Explaining Makefiles and static libraries.
-* Guiding the implementation process when encountering unfamiliar concepts.
-
-The code was developed and understood through the student's own work. AI explanations were used as a supplementary learning resource rather than as a replacement for understanding the implementation.
 
 ## Project Structure
 
